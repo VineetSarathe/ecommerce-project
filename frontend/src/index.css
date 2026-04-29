@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+
+/* @media print {
+  nav, aside {
+    display: none !important;
+  }
+
+  body {
+    background: white;
+  }
+}
+ */
+
+
+
+@media print {
+
+  /* ❌ Sidebar + Navbar hide */
+  nav, aside {
+    display: none !important;
+  }
+
+  /* 🔥 Layout flex हटाओ */
+  .flex {
+    display: block !important;
+  }
+
+  /* 🔥 Content full width */
+  .flex-1 {
+    width: 100% !important;
+  }
+
+  /* 🔥 Background हटाओ */
+  body {
+    background: white !important;
+  }
+}
+
+
+@media print {
+
+  /* ❌ Tracking section hide */
+  .print-hide-tracking {
+    display: none !important;
+  }
+
+  /* ❌ Progress bar hide */
+  .print-hide-progress {
+    display: none !important;
+  }
+}
+
+
+
+
+/* ✅ Prevent horizontal overflow */
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  padding-top: 26px; 
+}
+
+/* ✅ Root container fix */
+#root {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+
+
+/* Hide scrollbar but keep scroll */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+
+@media print {
+  header,
+  footer,
+  nav {
+    display: none !important;
+  }
+
+  body {
+    background: white !important;
+  }
+
+  .invoice-container {
+    box-shadow: none !important;
+    margin: 0 !important;
+  }
+}
